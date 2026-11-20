@@ -14,6 +14,7 @@ import {
   User,
   MessageCircle,
   ShieldCheck,
+  Download,
 } from 'lucide-react';
 import { AuthSession, BootstrapAuthStatus, DeviceInfo } from '../../types/pos';
 import {
@@ -1007,9 +1008,20 @@ export const LoginGateway: React.FC<LoginGatewayProps> = ({
         )}
 
         {/* Footer */}
-        <div className="px-6 py-3 bg-slate-950 border-t border-slate-800 flex items-center justify-between text-xs text-slate-500">
-          <span>WAQAS POS SOFTWARE · Multi-Mart Cloud POS</span>
-          <span>Currency: PKR (Rs.)</span>
+        <div className="px-6 py-3 bg-slate-950 border-t border-slate-800 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400">
+          <span>WAQAS POS SOFTWARE · v3.0.0 · Multi-Mart Cloud POS</span>
+          <div className="flex items-center gap-3">
+            <a
+              href="/download?v=3.0.0"
+              download="WAQAS-POS-SOFTWARE-v3.0.0.zip"
+              className="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-semibold transition-colors"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Download v3.0.0 ZIP</span>
+            </a>
+            <span className="text-slate-600">|</span>
+            <span>Currency: PKR (Rs.)</span>
+          </div>
         </div>
       </div>
 
